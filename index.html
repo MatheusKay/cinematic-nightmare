@@ -9,30 +9,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="imagens/Favicon-32x32.png" type="image/x-icon" />
+    <link rel="icon" href="imagens/Favicon-32x32.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header class="header">
-            <h1 class="header__logo">
-                <img src="imagens/Logo-site-terror.png" alt="">
+            <h1>
+                <img class="header__logo" src="imagens/Logo-site-terror.png" alt="">
             </h1>
-            <nav class="header__nav">
-                <ul class="header__nav__links">
-                    <li class="header__nav__links__item">
-                        <a href="index.html" class="header__nav__links__item__link">Home</a>
-                    </li>
-                    <li class="header__nav__links__item">
-                        <a href="movisTrailers.html" target="_blank" class="header__nav__links__item__link">Movies</a>
-                    </li>
-                </ul>
-            </nav>
+            <button class="header__menu__button" onclick="menuClick()">
+                <span class="material-symbols-outlined icon-menu">menu</span>
+            </button>
+            <div class="header__menu">
+                <nav class="header__nav">
+                    <ul class="header__nav__links">
+                        <a href="index.html" class="header__nav__links__item__link">
+                            <li class="header__nav__links__item">
+                                Home
+                            </li>
+                        </a>
+                        <a href="movisTrailers.html" target="_blank" class="header__nav__links__item__link">
+                            <li class="header__nav__links__item">
+                                Movies
+                            </li>
+                        </a>
+                    </ul>
+                </nav>
+            </div>
         </header>
     </div>
     <section class="filmes"> 
         <div class="filme">
-            <div class="um">
+            <div class="filme__fundo__um">
                 <div class="filmes__info">
                     <h2 class="filmes__info__title">A Freira 2</h2>
                     <p class="filmes__info__desc">
@@ -40,7 +51,7 @@
                     </p>
                 </div>
             </div>
-            <div class="dois">
+            <div class="filme__fundo__dois">
                 <div class="filmes__info">
                     <h2 class="filmes__info__title">O Exorcismo Do Papa</h2>
                     <p class="filmes__info__desc">
@@ -48,7 +59,7 @@
                     </p>
                 </div>
             </div>
-            <div class="tres">
+            <div class="filme__fundo__tres">
                 <div class="filmes__info">
                     <h2 class="filmes__info__title">Panico VI</h2>
                     <p class="filmes__info__desc">
@@ -56,7 +67,7 @@
                     </p>
                 </div>
             </div>
-            <div class="quatro">
+            <div class="filme__fundo__quatro">
                 <div class="filmes__info">
                     <h2 class="filmes__info__title">Sobrenatural 5</h2>
                     <p class="filmes__info__desc">
@@ -64,7 +75,7 @@
                     </p>
                 </div>
             </div>
-            <div class="cinco">
+            <div class="filme__fundo__cinco">
                 <div class="filmes__info">
                     <h2 class="filmes__info__title">A Morte Do Demonio: A ascensão</h2>
                     <p class="filmes__info__desc">

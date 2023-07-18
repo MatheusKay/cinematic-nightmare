@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #161616;
+    background-color: #6C7A86;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -15,14 +15,38 @@ body {
     margin: 0 auto;
 }
 
+/*Codigos reultilizaveis*/
+
+.header,
+.filmes__container,
+.filme,
+.filme__fundo__um,
+.filme__fundo__dois,
+.filme__fundo__tres,
+.filme__fundo__quatro,
+.filme__fundo__cinco,
+.footer,
+.trailer__filme{
+    width: 100%
+}
+
+.filme__fundo__um,
+.filme__fundo__dois,
+.filme__fundo__tres,
+.filme__fundo__quatro,
+.filme__fundo__cinco{
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 /*Header do site*/
 
 .header {
     position: absolute;
     top: 0;
-    left: 70px;
+    left: 0;
     z-index: 1;
-    width: 90%;
     padding: 0 40px;
     display: flex;
     justify-content: space-between;
@@ -32,7 +56,11 @@ body {
 }
 
 .header__logo {
-    color: #fff;
+    width: 250px;
+}
+
+.header__menu__button {
+    display: none;
 }
 
 .header__nav__links {
@@ -54,39 +82,41 @@ body {
     color: #aca8a8;
 }
 
+/*header da pagina Movies*/
+
+.header--add-black,
+.header__menu--add-black,
+.footer {
+    background-color: #000;
+}
+
+.header__nav__links__item:active {
+    background-color: #6C7A86;
+}
+
 /*Seção dos filmes*/
 
 .filmes__container {
     max-width: 800px;
-    width: 100%;
     margin: 0 auto;
 }
-/*
-.filmes {
-    height: 100vh;
-    width: 100%;
-    background-image: url(imagens/fundo-a-freira-2.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-}*/
 
 .filmes__info{
     color: #fff;
     position: absolute;
     top: 0;
     left: 200px;
-    margin-top: 150px;
+    margin-top: 15%;
 }
 
 .filmes__info__title {
-    width: 420px;
-    font-size: 40px;
+    width: 50%;
+    font-size: 2.5em;
     font-family: 'Cinzel', serif;
 }
 
 .filmes__info__desc {
-    width: 480px;
+    width: 55%;
     font-size: 18px;
     margin-top: 16px;
 }
@@ -113,7 +143,7 @@ body {
 }
 
 .poster-dos-filmes {
-    width: 900px;
+    width: 68%;
     margin-top: 60px;
     position: absolute;
     left: 200px;
@@ -124,72 +154,41 @@ body {
     height: 180px;
 }
 
-/*TEstes do site*/
+/*Fundo do site*/
 
 .filme {
-    width: 100%;
     height: 100vh;
 }
 
 .slick-center img {
-    height: 220px;
+    height: 210px;
 }
 
-/*
-p{
-    position: absolute;
-    top: 0;
-    left: 0;
-}*/
-
-.um {
+.filme__fundo__um {
     background-image: url(imagens/fundo-a-freira-2.png);
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
-.dois {
+.filme__fundo__dois {
     background-image: url(imagens/fundo-exorcismo-do-papa.png);
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
-.tres {
+.filme__fundo__tres {
     background-image: url(imagens/fundo-panico-6.png);
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
-.quatro {
+.filme__fundo__quatro {
     background-image: url(imagens/fundo-sobrenatural.png);
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
-.cinco {
+.filme__fundo__cinco {
     background-image: url(imagens/fundo-a-morte-do-demonio.png);
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 /*Footer do site*/
 
 .footer {
-    max-width: 1200px;
-    width: 100%;
     margin: 0 auto;
     padding: 16px;
-    background-color: transparent;
     border-top: 1px solid #ccc;
 }
 
@@ -203,24 +202,388 @@ p{
 
 .trailer__trailers {
     max-width: 960px;
-    width: 100%;
     margin: 0 auto;
+}
+
+.trailer__filme {
+    width: 90%;
+    margin-left: 5%;
 }
 
 .trailer__trailers__filmes {
     margin-top: 150px;
     display: flex;
     flex-direction: column;
-    color: #fff;
+    color: #000;
 }
 
 .trailer__trailers__filmes__title {
     font-size: 40px;
     margin-bottom: 36px;
+    margin-left: 5%;
     font-family: 'Cinzel', serif;
 }
 
 .trailer__trailers__filmes__desc {
     font-size: 18px;
-    margin: 40px 0;
+    margin: 40px 5%;
+
+}
+
+/*Media Mobile*/
+
+@media screen and (max-width: 767px) {
+    /*Header do site*/
+
+    .header {
+        left: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .header__mobile {
+        visibility: visible;
+    }
+
+    .header__menu {
+        position: absolute;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        background-color: #6C7A86;
+        visibility: collapse;
+    }
+    
+    .header__menu__button {
+        display: block;
+        padding: 16px;
+        background-color: transparent;
+        border: none;
+    }
+
+    .icon-menu {
+        color: #fff;
+        font-size: 3em;
+    }
+    
+    .header__nav--is-inativo {
+        visibility: visible;
+    }
+    
+    .header__nav__links {
+        display: block;
+    }
+
+    .header__nav__links__item {
+        padding: 8px 36px;
+        margin-bottom: 16px;
+        margin-right: 0;
+    }
+
+    /*Seções do site */
+
+    .filmes__info {
+        left: 10%;
+        margin-top: 25vh;
+    }
+
+    .filmes__info--add-margin {
+        margin-top: 60%;
+    }
+    
+    .filmes__info__title {
+        font-size: 1.5em;
+        width: 85%;
+    }
+    
+    .filmes__info__desc {
+        font-size: 0.9em;
+        width: 90%;
+    }
+
+    .poster-dos-filmes {
+        width: 65vw;
+        left: 20%;
+    }
+    
+    .poster-dos-filmes__img {
+        height: 8em;
+    }
+
+    .slick-center img {
+        height: 10em;
+    }
+
+    /*Imagens do fundo*/
+
+    .filme__fundo__um {
+        background-image: url(imagens/fundos-remotos/Fundo-A-freira-celular.png);
+    }
+
+    .filme__fundo__dois {
+        background-image: url(imagens/fundos-remotos/Fundo-O-exorcismo-papa-celular.png);
+    }
+
+    .filme__fundo__tres {
+        background-image: url(imagens/fundos-remotos/Fundo-Panico-6-celular.png);
+    }
+
+    .filme__fundo__quatro {
+        background-image: url(imagens/fundos-remotos/Fundo-Sobrenatural-5-celular.png);
+    }
+
+    .filme__fundo__cinco {
+        background-image: url(imagens/fundos-remotos/Fundo-A-morte-demonio-celular.png);
+    }
+
+    /*Pagina Movies Styles*/
+
+    /*Seções da pagina Movies*/
+
+    .trailer__filme {
+        width: 90%;
+        height: 35vh;
+        margin-left: 5%;
+    }
+
+    .trailer__trailers__filmes--add-margin {
+        margin-top: 250px;
+    }
+
+    .trailer__trailers__filmes__title {
+        width: 85%;
+        margin-left: 5%;
+        font-size: 1.6em;
+    }
+
+    .trailer__trailers__filmes__desc {
+        width: 90%;
+        margin-left: 5%;
+        font-size: 1.1em;
+    }
+}
+
+/*Media tablet*/
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /*Header do site*/
+    
+    .header {
+        left: 0;
+        width: 100%;
+    }
+
+    /*Seções do site*/
+
+    .filmes__info {
+        left: 10%;
+        margin-top: 30vh;
+    }
+
+    .filmes__info__title {
+        width: 85%;
+        font-size: 3em;
+    }
+
+    .filmes__info__desc {
+        width: 90%;
+        font-size: 1.4em;
+    }
+
+    .poster-dos-filmes {
+        left: 16%;
+    }
+
+    .poster-dos-filmes__img {
+        height: 200px;
+    }
+
+    .slick-center img {
+        height: 230px;
+    }
+
+    .slick-prev:before, 
+    .slick-next:before {
+        font-size: 30px;
+    }
+
+    /*Imagens do fundo*/
+
+    .filme__fundo__um {
+        background-image: url(imagens/fundos-remotos/Fundo-A-freira-celular.png);
+    }
+
+    .filme__fundo__dois {
+        background-image: url(imagens/fundos-remotos/Fundo-O-exorcismo-papa-celular.png);
+    }
+
+    .filme__fundo__tres {
+        background-image: url(imagens/fundos-remotos/Fundo-Panico-6-celular.png);
+    }
+
+    .filme__fundo__quatro {
+        background-image: url(imagens/fundos-remotos/Fundo-Sobrenatural-5-celular.png);
+    }
+
+    .filme__fundo__cinco {
+        background-image: url(imagens/fundos-remotos/Fundo-A-morte-demonio-celular.png);
+    }
+
+    /*Pagina Movies Styles/Codigos reultilizaveis*/
+
+    .trailer__filme,
+    .trailer__trailers__filmes__title,
+    .trailer__trailers__filmes__desc {
+        margin-left: 10%;
+    }
+
+    /*Seções da pagina Movies*/
+
+    .trailer__filme {
+        width: 80%;
+        height: 35vh;
+    }
+
+    .trailer__trailers__filmes--add-margin {
+        margin-top: 250px;
+    }
+
+    .trailer__trailers__filmes__title {
+        width: 85%;
+        font-size: 1.6em;
+    }
+
+    .trailer__trailers__filmes__desc {
+        width: 80%;
+        font-size: 1.1em;
+    }
+}
+
+
+/*Media desktop*/
+
+@media screen and (width: 1024px){
+    /*Header do site*/
+    
+    .header__logo {
+        width: 200px;
+    }
+
+    .header__nav__links__item__link {
+        font-size: 1rem;
+    }
+
+    /*Seções do site*/
+    
+    .filmes__info__title {
+        font-size: 1.8em;
+    }
+    
+    .filmes__info__desc {
+        font-size: 0.8em;
+    }
+
+    .poster-dos-filmes {
+        width: 63%
+    }
+
+    .poster-dos-filmes__img {
+        height: 140px;
+    }
+
+    .slick-center img {
+        height: 170px;
+    }
+}
+
+@media screen and (width: 1600px) {
+    /*Header do site*/
+    
+    .header__logo {
+        width: 280px;
+    }
+
+    .header__nav__links__item__link {
+        font-size: 1.4rem;
+    }
+
+    /*Seções do site*/
+
+    .filmes__info {
+        margin-top: 15%;
+    }
+    
+    .filmes__info__title {
+        font-size: 3.5em;
+    }
+    
+    .filmes__info__desc {
+        font-size: 1.5em;
+    }
+    .poster-dos-filmes {
+        width: 73%
+    }
+
+    .poster-dos-filmes__img {
+        height: 220px;
+    }
+
+    .slick-center img {
+        height: 250px;
+    }
+
+    /*Botão do carroseul*/
+
+    .slick-prev:before, 
+    .slick-next:before {
+        font-size: 35px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    /*Header do site*/
+    
+    .header__logo {
+        width: 380px;
+    }
+
+    .header__nav__links__item {
+        margin-bottom: 32px;
+    }
+
+    .header__nav__links__item__link {
+        font-size: 1.8rem;
+    }
+
+    /*Seções do site*/
+
+    .filmes__info {
+        margin-top: 15%;
+    }
+    
+    .filmes__info__title {
+        font-size: 4.5em;
+    }
+    
+    .filmes__info__desc {
+        font-size: 2em;
+    }
+    .poster-dos-filmes {
+        width: 73%
+    }
+
+    .poster-dos-filmes__img {
+        height: 280px;
+    }
+
+    .slick-center img {
+        height: 310px;
+    }
+
+    /*Botão do carroseul*/
+
+    .slick-prev:before, 
+    .slick-next:before {
+        font-size: 45px;
+    }
 }

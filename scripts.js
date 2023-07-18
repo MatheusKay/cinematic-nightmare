@@ -1,5 +1,37 @@
-document.addEventListener('DOMContentLoaded', function() {
-    $(document).ready(function() {
+$(document).ready(function() {
+    if ($(window).width() < 767) {
+        $('.filme').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.poster-dos-filmes'
+        });
+        $('.poster-dos-filmes').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            asNavFor: '.filme',
+            dots: true,
+            centerMode: true,
+            focusOnSelect: true
+        });
+    } if ($(window).width() > 768 && $(window).width() < 1023) {
+        $('.filme').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.poster-dos-filmes'
+        });
+        $('.poster-dos-filmes').slick({
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            asNavFor: '.filme',
+            dots: true,
+            centerMode: true,
+            focusOnSelect: true
+        });
+    } else {
         $('.filme').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -15,33 +47,19 @@ document.addEventListener('DOMContentLoaded', function() {
             centerMode: true,
             focusOnSelect: true
         });
-    })
+    }
 })
 
-/*
-$('#poster-dos-filmes').slick({
-            centerMode: true,
-            centerPadding: '60px',
-            slidesToShow: 3,
-            responsive: [
-                {
-                breakpoint: 768,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 3
-                }
-                },
-                {
-                breakpoint: 480,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1
-                }
-                }
-            ]
-        });
-*/
+function menuClick() {
+    const menuHamburg = document.querySelector('.header__menu')
+    const secaoSite = document.querySelector('.trailer__trailers__filmes')
+    const secaoHome = document.querySelector('.filmes__info')
+
+    const classe = 'header__nav--is-inativo'
+    const classeMargin = 'trailer__trailers__filmes--add-margin'
+    const classeMarginHome = 'filmes__info--add-margin'
+    
+    menuHamburg.classList.toggle(classe)
+    secaoHome.classList.toggle(classeMarginHome)
+    secaoSite.classList.toggle(classeMargin)
+}
