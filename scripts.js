@@ -54,12 +54,18 @@ function menuClick() {
     const menuHamburg = document.querySelector('.header__menu')
     const secaoSite = document.querySelector('.trailer__trailers__filmes')
     const secaoHome = document.querySelector('.filmes__info')
+    const bodyIndex = 'index.html'
 
     const classe = 'header__nav--is-inativo'
     const classeMargin = 'trailer__trailers__filmes--add-margin'
     const classeMarginHome = 'filmes__info--add-margin'
     
     menuHamburg.classList.toggle(classe)
-    secaoHome.classList.toggle(classeMarginHome)
-    secaoSite.classList.toggle(classeMargin)
+
+    if (window.location.pathname.endsWith(bodyIndex)) {
+        secaoHome.classList.toggle(classeMarginHome)
+    } else {
+        secaoSite.classList.toggle(classeMargin)
+    }
+    
 }

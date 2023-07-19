@@ -15,7 +15,7 @@ body {
     margin: 0 auto;
 }
 
-/*Codigos reultilizaveis*/
+/*Codigos reutilizável*/
 
 .header,
 .filmes__container,
@@ -85,7 +85,6 @@ body {
 /*header da pagina Movies*/
 
 .header--add-black,
-.header__menu--add-black,
 .footer {
     background-color: #000;
 }
@@ -253,6 +252,10 @@ body {
         background-color: #6C7A86;
         visibility: collapse;
     }
+
+    .header__menu--add-black {
+        background-color: #000;
+    }
     
     .header__menu__button {
         display: block;
@@ -275,7 +278,7 @@ body {
     }
 
     .header__nav__links__item {
-        padding: 8px 36px;
+        padding: 16px 36px;
         margin-bottom: 16px;
         margin-right: 0;
     }
@@ -288,7 +291,7 @@ body {
     }
 
     .filmes__info--add-margin {
-        margin-top: 60%;
+        margin-top: 65%;
     }
     
     .filmes__info__title {
@@ -347,7 +350,7 @@ body {
     }
 
     .trailer__trailers__filmes--add-margin {
-        margin-top: 250px;
+        margin-top: 70%;
     }
 
     .trailer__trailers__filmes__title {
